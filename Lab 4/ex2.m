@@ -9,7 +9,7 @@ t = 1 : 0.01 : 5;
 n = length(t);
 sol = [];
 for i = 1 : n
-	sol = [sol newton(x, y, t(i))];
+	sol = [sol newtonForAValue(x, y, t(i))];
 end
 hold on;
 plot(x, y, "*")
