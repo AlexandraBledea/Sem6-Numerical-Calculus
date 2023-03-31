@@ -11,4 +11,4 @@ first = FirstRowDivDiff(double_x, y, yy);
 result = Hermite(double_x, y, first, xx);
 
 printf("Hermite_ln(%f)=%f\n", xx, result);
-printf("|ln(%f) - Hermite_ln(%f)| = %f\n", xx, xx, abs(log10(1.5) - result));
+printf("|ln(%f) - Hermite_ln(%f)| = %f\n", xx, xx, abs(log(1.5) - result));
