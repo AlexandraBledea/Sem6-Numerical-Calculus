@@ -21,6 +21,7 @@ approx_3 = polyval(p3, 45);
 fprintf('Approximation for p2 is: %f\n', approx_2);
 fprintf('Approximation for p3 is: %f\n', approx_3);
 
+
 % c)
 
 actual = 0.095848;
@@ -40,6 +41,5 @@ plot(T, P, 'rp');
 plot(xp, polyval(p1, xp), 'b-');
 plot(xp, polyval(p2, xp), 'g-');
 plot(xp, polyval(p3, xp), 'k-');
-
 
 

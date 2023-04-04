@@ -6,8 +6,8 @@ speed = [75 77 80 74 72];
 
 t = 10
 
-pos = spline(time, [75 distance 72]);
+pos = csape(time, distance, 'complete', [75, 72]);
 sp = ppder(pos);
 
-ppval(pos, t)
-ppval(sp, t)
+fnval(pos, t)
+fnval(sp, t)

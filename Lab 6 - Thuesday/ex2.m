@@ -5,11 +5,12 @@ b = max(x);
 
 xx = a : 0.01 : b;
 
-p = spline(x, y, xx);
+spline_natural = csape(x, y, 'variational');
+natural = fnval(spline_natural, xx);
 
 hold on;
 plot(x, y, '*r')
-plot(xx, p, 'g')
+plot(xx, natural , 'g')
 hold off;
 
 
