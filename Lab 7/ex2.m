@@ -1,7 +1,7 @@
-printf("== Exercise 3\n")
+printf("== Exercise 2\n")
 
-T = [0,10,20,30,40,60,80,100];
-P = [0.0061,0.0123,0.0234,0.0424,0.0738,0.1992,0.4736,1.0133];
+T = [0, 10, 20, 30, 40, 60, 80, 100];
+P = [0.0061, 0.0123, 0.0234, 0.0424, 0.0738, 0.1992, 0.4736, 1.0133];
 
 % a)
 
@@ -34,13 +34,26 @@ fprintf('Error for p3 is: |actual - approx_3| = %f\n', abs(actual - approx_3));
 % d)
 
 hold on
-xp = [0:0.01:100];
+
+sol = [];
+t = 0 : 0.01 : 100;
+x = 0 : 0.1 : 100;
+n = length(x);
 
 plot(T, P, 'rp');
 
-plot(xp, polyval(p1, xp), 'b-');
-plot(xp, polyval(p2, xp), 'g-');
-plot(xp, polyval(p3, xp), 'k-');
+plot(xp, polyval(p1, t), 'b-');
+plot(xp, polyval(p2, t), 'g-');
+plot(xp, polyval(p3, t), 'k-');
+
+
+for i = 1 : n
+  sol = [sol newtonForAValue(T, P, x(i))]
+endfor
+
+plot(x, sol, "y");
+
+
 
 
 
