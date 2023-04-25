@@ -37,7 +37,7 @@ hold on
 
 sol = [];
 t = 0 : 0.01 : 100;
-x = 0 : 0.1 : 100;
+xp = 0 : 0.01 : 100;
 n = length(x);
 
 plot(T, P, 'rp');
@@ -48,10 +48,10 @@ plot(xp, polyval(p3, t), 'k-');
 
 
 for i = 1 : n
-  sol = [sol newtonForAValue(T, P, x(i))]
+  sol = [sol newtonForAValue(T, P, xp(i))]
 endfor
 
-plot(x, sol, "y");
+plot(xp, sol, "y");
 
 
 
